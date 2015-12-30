@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "FAEAA6C67ABE9B93C965D29457A9AE5074F330C6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "691e19cf-b3e0-4adf-a9cb-02ad3777c127++6834" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "FAEAA6C67ABE9B93C965D29457A9AE5074F330C6" : 0,
+    "691e19cf-b3e0-4adf-a9cb-02ad3777c127++6834" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9230AEA3-2B0B-47B2-A5B3-1580A3ADF0BB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "FAEAA6C67ABE9B93C965D29457A9AE5074F330C6" : "GRdF_V1.0_Build1_20150803\/",
+    "691e19cf-b3e0-4adf-a9cb-02ad3777c127++6834" : "GRdF_V1.0_Build1_20150803\/GRdF\/Classes\/Controller\/MBProgressHUD\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GRdF",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GRdF.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/188.165.202.38\/onatys",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "691e19cf-b3e0-4adf-a9cb-02ad3777c127++6834"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/aelbarji\/GRdF.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FAEAA6C67ABE9B93C965D29457A9AE5074F330C6"
+    }
+  ]
+}

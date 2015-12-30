@@ -53,7 +53,6 @@
 		9527D7011A1BB10600084D4D /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9527D6FF1A1BB10600084D4D /* MainViewController.xib */; };
 		9527D7041A1BB1A700084D4D /* DocumentInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 9527D7031A1BB1A700084D4D /* DocumentInterface.m */; };
 		9527D7071A1BC17100084D4D /* OLSyncDatabaseV2.m in Sources */ = {isa = PBXBuildFile; fileRef = 9527D7061A1BC17100084D4D /* OLSyncDatabaseV2.m */; };
-		9527D70A1A1BC18D00084D4D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9527D7091A1BC18D00084D4D /* MBProgressHUD.m */; };
 		9527D70F1A1BC1AB00084D4D /* FileParserV2.m in Sources */ = {isa = PBXBuildFile; fileRef = 9527D70C1A1BC1AB00084D4D /* FileParserV2.m */; };
 		9527D7101A1BC1AB00084D4D /* OLSyncFilesV2.m in Sources */ = {isa = PBXBuildFile; fileRef = 9527D70E1A1BC1AB00084D4D /* OLSyncFilesV2.m */; };
 		9527D7121A1BC1D200084D4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9527D7111A1BC1D200084D4D /* main.m */; };
@@ -100,9 +99,12 @@
 		95DEFE6A1A239AF000F7D88B /* btnClose_clicked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95DEFE661A239AF000F7D88B /* btnClose_clicked@2x.png */; };
 		95DEFE6B1A239AF000F7D88B /* btnClose.png in Resources */ = {isa = PBXBuildFile; fileRef = 95DEFE671A239AF000F7D88B /* btnClose.png */; };
 		95DEFE6C1A239AF000F7D88B /* btnClose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95DEFE681A239AF000F7D88B /* btnClose@2x.png */; };
+		FA22F205B49F672DD9DE1576 /* libPods-GRdF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E318F3538DDDAE072318B3 /* libPods-GRdF.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55E318F3538DDDAE072318B3 /* libPods-GRdF.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GRdF.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		688380EDBD29C63FF40F09E6 /* Pods-GRdF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GRdF.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GRdF/Pods-GRdF.debug.xcconfig"; sourceTree = "<group>"; };
 		6DDC90BA1B95A05800F76D3D /* iPadData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = iPadData.sqlite; path = GRdF/Resources/data/iPadData.sqlite; sourceTree = "<group>"; };
 		6DE5A9D51B6F5F2300C934C9 /* icnGRdFPinPoint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icnGRdFPinPoint@2x.png"; path = "GRdF/Resources/Image/Icon/icnGRdFPinPoint@2x.png"; sourceTree = "<group>"; };
 		6DE5A9D71B6F611C00C934C9 /* icnSettings_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icnSettings_white@2x.png"; path = "GRdF/Resources/Image/Icon/icnSettings_white@2x.png"; sourceTree = "<group>"; };
@@ -161,8 +163,6 @@
 		9527D7031A1BB1A700084D4D /* DocumentInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DocumentInterface.m; path = GRdF/Classes/Controller/Interfaces/DocumentInterface.m; sourceTree = "<group>"; };
 		9527D7051A1BC17100084D4D /* OLSyncDatabaseV2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OLSyncDatabaseV2.h; path = GRdF/Classes/Controller/OLSync/OLSyncDatabaseV2.h; sourceTree = SOURCE_ROOT; };
 		9527D7061A1BC17100084D4D /* OLSyncDatabaseV2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OLSyncDatabaseV2.m; path = GRdF/Classes/Controller/OLSync/OLSyncDatabaseV2.m; sourceTree = SOURCE_ROOT; };
-		9527D7081A1BC18D00084D4D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = GRdF/Classes/Controller/MBProgressHUD/MBProgressHUD.h; sourceTree = "<group>"; };
-		9527D7091A1BC18D00084D4D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = GRdF/Classes/Controller/MBProgressHUD/MBProgressHUD.m; sourceTree = "<group>"; };
 		9527D70B1A1BC1AB00084D4D /* FileParserV2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileParserV2.h; path = GRdF/Classes/Controller/OLSync/FileParserV2.h; sourceTree = SOURCE_ROOT; };
 		9527D70C1A1BC1AB00084D4D /* FileParserV2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileParserV2.m; path = GRdF/Classes/Controller/OLSync/FileParserV2.m; sourceTree = SOURCE_ROOT; };
 		9527D70D1A1BC1AB00084D4D /* OLSyncFilesV2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OLSyncFilesV2.h; path = GRdF/Classes/Controller/OLSync/OLSyncFilesV2.h; sourceTree = SOURCE_ROOT; };
@@ -206,8 +206,6 @@
 		95481D4D1A1B7B04005E1E1D /* GRDFCityName4_CityId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GRDFCityName4_CityId.m; path = GRdF/Model/GRDFCityName4_CityId.m; sourceTree = "<group>"; };
 		95481D6B1A1B8CEF005E1E1D /* OLInternetD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OLInternetD.h; path = GRdF/Classes/Controller/OLInternet/OLInternetD.h; sourceTree = SOURCE_ROOT; };
 		95481D6C1A1B8CEF005E1E1D /* OLInternetD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OLInternetD.m; path = GRdF/Classes/Controller/OLInternet/OLInternetD.m; sourceTree = SOURCE_ROOT; };
-		95481D6F1A1B8D14005E1E1D /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = delete.png; path = GRdF/Classes/Controller/MBProgressHUD/delete.png; sourceTree = "<group>"; };
-		95481D721A1B8D14005E1E1D /* valid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = valid.png; path = GRdF/Classes/Controller/MBProgressHUD/valid.png; sourceTree = "<group>"; };
 		95481D8D1A1B9E62005E1E1D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		95481D901A1B9E62005E1E1D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		95481D911A1B9E62005E1E1D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -297,6 +295,7 @@
 		95DEFE661A239AF000F7D88B /* btnClose_clicked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btnClose_clicked@2x.png"; path = "GRdF/Resources/Image/Button/btnClose_clicked@2x.png"; sourceTree = "<group>"; };
 		95DEFE671A239AF000F7D88B /* btnClose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btnClose.png; path = GRdF/Resources/Image/Button/btnClose.png; sourceTree = "<group>"; };
 		95DEFE681A239AF000F7D88B /* btnClose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btnClose@2x.png"; path = "GRdF/Resources/Image/Button/btnClose@2x.png"; sourceTree = "<group>"; };
+		B1D9BEBC76B624080F4305F0 /* Pods-GRdF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GRdF.release.xcconfig"; path = "Pods/Target Support Files/Pods-GRdF/Pods-GRdF.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,12 +310,22 @@
 				95481DC71A1B9EFA005E1E1D /* CoreData.framework in Frameworks */,
 				95481DC61A1B9EFA005E1E1D /* UIKit.framework in Frameworks */,
 				95481DC41A1B9EFA005E1E1D /* Foundation.framework in Frameworks */,
+				FA22F205B49F672DD9DE1576 /* libPods-GRdF.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		071057A14AFCF5AD847754DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				688380EDBD29C63FF40F09E6 /* Pods-GRdF.debug.xcconfig */,
+				B1D9BEBC76B624080F4305F0 /* Pods-GRdF.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9508987A195C0304007AC110 /* OLInternet */ = {
 			isa = PBXGroup;
 			children = (
@@ -491,41 +500,6 @@
 				950CE38F1A1CDD3B007D6DF3 /* DocumentCell.xib */,
 			);
 			name = DocumentCell;
-			sourceTree = "<group>";
-		};
-		95481D6E1A1B8CFA005E1E1D /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				95481D761A1B8D19005E1E1D /* Controller */,
-				95481D771A1B8D22005E1E1D /* Resources */,
-			);
-			name = MBProgressHUD;
-			sourceTree = "<group>";
-		};
-		95481D761A1B8D19005E1E1D /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				9527D7081A1BC18D00084D4D /* MBProgressHUD.h */,
-				9527D7091A1BC18D00084D4D /* MBProgressHUD.m */,
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
-		95481D771A1B8D22005E1E1D /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				95481D781A1B8D29005E1E1D /* Images */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		95481D781A1B8D29005E1E1D /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				95481D6F1A1B8D14005E1E1D /* delete.png */,
-				95481D721A1B8D14005E1E1D /* valid.png */,
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 		95481D791A1B8D54005E1E1D /* Interfaces */ = {
@@ -731,6 +705,7 @@
 				9596616A182259C600E5F088 /* GRdF */,
 				95966163182259C600E5F088 /* Frameworks */,
 				95966162182259C600E5F088 /* Products */,
+				071057A14AFCF5AD847754DA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -770,6 +745,7 @@
 				95481D8D1A1B9E62005E1E1D /* Cocoa.framework */,
 				95481DAC1A1B9E62005E1E1D /* XCTest.framework */,
 				95481D8F1A1B9E62005E1E1D /* Other Frameworks */,
+				55E318F3538DDDAE072318B3 /* libPods-GRdF.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -834,7 +810,6 @@
 				9527D7171A1BC34F00084D4D /* GRdFGlobals.m */,
 				95481D791A1B8D54005E1E1D /* Interfaces */,
 				952399E91A1F76CA000EE943 /* Map Annotation */,
-				95481D6E1A1B8CFA005E1E1D /* MBProgressHUD */,
 				95405E081850631A00BD42EE /* OLComboBox */,
 				95481D7A1A1B8D68005E1E1D /* OLCoreDataManagement */,
 				9527D6EC1A1B9FB500084D4D /* OLGps */,
@@ -889,9 +864,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95481DEC1A1B9EFA005E1E1D /* Build configuration list for PBXNativeTarget "GRdF" */;
 			buildPhases = (
+				CB3D32A0EAE2C67CB40C95FC /* Check Pods Manifest.lock */,
 				95481DBF1A1B9EFA005E1E1D /* Sources */,
 				95481DC01A1B9EFA005E1E1D /* Frameworks */,
 				95481DC11A1B9EFA005E1E1D /* Resources */,
+				3DA43C7F76787E2976A49E68 /* Embed Pods Frameworks */,
+				C8814315D1FE7CEA1F9D85F0 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -998,6 +976,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3DA43C7F76787E2976A49E68 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GRdF/Pods-GRdF-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8814315D1FE7CEA1F9D85F0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GRdF/Pods-GRdF-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB3D32A0EAE2C67CB40C95FC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		95481DBF1A1B9EFA005E1E1D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1030,7 +1056,6 @@
 				9527D6FB1A1BB0F400084D4D /* SettingsViewController.m in Sources */,
 				950CE38B1A1CDD2B007D6DF3 /* DocumentPickerViewController.m in Sources */,
 				9527D7151A1BC1EE00084D4D /* AppDelegate.m in Sources */,
-				9527D70A1A1BC18D00084D4D /* MBProgressHUD.m in Sources */,
 				9530EA271A1E505F00555BE9 /* GRDFDocument.m in Sources */,
 				9527D7121A1BC1D200084D4D /* main.m in Sources */,
 				9527D7101A1BC1AB00084D4D /* OLSyncFilesV2.m in Sources */,
@@ -1073,6 +1098,7 @@
 /* Begin XCBuildConfiguration section */
 		95481DED1A1B9EFA005E1E1D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 688380EDBD29C63FF40F09E6 /* Pods-GRdF.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1110,6 +1136,7 @@
 		};
 		95481DEE1A1B9EFA005E1E1D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1D9BEBC76B624080F4305F0 /* Pods-GRdF.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1170,12 +1197,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "CECB6B04-C07B-49FA-9750-A040C786D59A";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -1199,14 +1226,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "CECB6B04-C07B-49FA-9750-A040C786D59A";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};

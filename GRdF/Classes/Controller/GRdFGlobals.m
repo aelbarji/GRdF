@@ -10,6 +10,7 @@
 
 
 #import "GRdFGlobals.h"
+#import <CommonCrypto/CommonDigest.h>
 
 @implementation GRdFGlobals
 #pragma mark - public instance methods
