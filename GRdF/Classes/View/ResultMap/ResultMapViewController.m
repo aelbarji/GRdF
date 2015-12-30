@@ -121,7 +121,6 @@
 //            annotationView         = [[MKPinAnnotationView alloc] initWithAnnotation:
             annotationView          = [[[MKAnnotationView alloc] initWithAnnotation:annotation
                                                                    reuseIdentifier:identifier] autorelease];
-
         }
         else
         {
