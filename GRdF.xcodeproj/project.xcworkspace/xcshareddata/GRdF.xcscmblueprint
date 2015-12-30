@@ -1,0 +1,24 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "691e19cf-b3e0-4adf-a9cb-02ad3777c127++6834" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "691e19cf-b3e0-4adf-a9cb-02ad3777c127++6834" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "748FFBDF-5279-4CB8-9B58-CAE397FEEE96",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "691e19cf-b3e0-4adf-a9cb-02ad3777c127++6834" : "GRdF_V1.0_Build1_20150803\/GRdF\/Classes\/Controller\/MBProgressHUD\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GRdF",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GRdF.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/188.165.202.38\/onatys",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "691e19cf-b3e0-4adf-a9cb-02ad3777c127++6834"
+    }
+  ]
+}
