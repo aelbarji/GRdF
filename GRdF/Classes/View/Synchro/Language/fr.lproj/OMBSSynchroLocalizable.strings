@@ -1,0 +1,42 @@
+/* 
+  OMBSSynchroLocalizable.strings
+  OMBS
+
+  Created by Jean-Philippe BEAUFILS on 16/09/13.
+  Copyright (c) 2013 Onatys. All rights reserved.
+*/
+
+// language = fr
+
+// ========    Synchronization process   =========
+// ----------------- warning ---------------------
+"Sync_Description"              = "Synchronisation des informations : toute demande d'abandon sera prise en compte à partir d'un point logique permettant de garantir la consistance des données";
+// --------- sub process title ---------
+"Sync_DownloadDbTimestamps"     = "Verification horodatage serveur";
+"Sync_DownloadDocumentTable"    = "Synchronisation des fiches";
+"Sync_DownloadCityTable"        = "Synchronisation du référentiel des villes";
+"Sync_DownloadFile"             = "Synchronisation des fichiers";
+
+// --------- sub process information ---------
+"Sync_Inf_CancelByUser"         = "annulé par utilisateur";
+"Sync_Inf_DocumentsDownload"    = "réception des fiches";
+"Sync_Inf_CitiesDownload"       = "réception du référentiel des villes";
+"Sync_DownloadRemainFiles"      = "fichiers à traiter";
+"Sync_DownloadRemainFile"       = "fichier à traiter";
+"Sync_DownloadMissingFiles"     = "fichiers non trouvés";
+"Sync_DownloadMissingFile"      = "fichier non trouvé";
+
+// ========== global process messages =========
+// ------------- title ------------------------
+"Sync_ProcessCompleted"         = "Synchronisation terminée";
+"Sync_ProcessAborted"           = "Synchronisation non completement réalisée";
+"Sync_TimestampsError"          = "Horodatage non disponible - synchronisation des données impossible";
+"Sync_DataPushError"            = "Données non correctement transmises au serveur";
+"Sync_DownloadFilesError"       = "Fichiers non complètement disponibles sur le serveur";
+
+// ------------ sync files labels ------------
+
+"Sync_Files"                    = "fichiers";
+"Sync_File"                     = "fichier";
+
+

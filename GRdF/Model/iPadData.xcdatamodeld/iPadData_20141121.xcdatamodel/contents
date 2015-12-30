@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="2014-11-20" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13F34" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="GRDFCity" representedClassName="GRDFCity" syncable="YES">
+        <attribute name="cityDepartment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cityId" attributeType="Double" defaultValueString="0.0" indexed="YES" syncable="YES"/>
+        <attribute name="cityLatitudeDeg" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cityLongitudeDeg" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cityNameFull" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cityNameSimple" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cityNameSoundex" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cityZipCode" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="GRDFCityName3_CityId" representedClassName="GRDFCityName3_CityId" syncable="YES">
+        <attribute name="cityId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cityNameFull" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prefix" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="GRDFCityName4_CityId" representedClassName="GRDFCityName4_CityId" syncable="YES">
+        <attribute name="cityId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cityNameFull" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prefix" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="GRDFCityName5_CityId" representedClassName="GRDFCityName5_CityId" syncable="YES">
+        <attribute name="cityId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cityNameFull" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prefix" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="GRDFCityName6_CityId" representedClassName="GRDFCityName6_CityId" syncable="YES">
+        <attribute name="cityId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cityNameFull" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prefix" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="GRDFCityName7_CityId" representedClassName="GRDFCityName7_CityId" syncable="YES">
+        <attribute name="cityId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cityNameFull" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prefix" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="GRDFCityZipCode_CityId" representedClassName="GRDFCityZipCode_CityId" syncable="YES">
+        <attribute name="cityId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cityNameFull" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cityZipCode" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="GRDFDocument" representedClassName="GRDFDocument" syncable="YES">
+        <attribute name="docCityNameFull" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="docDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="docFileName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="docId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="docLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="docLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="docReference" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="docTitle" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="LocalFiles" representedClassName="LocalFiles" syncable="YES">
+        <attribute name="localFileCRC" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="localFileLastUpdate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="localFileStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="localFileURL" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SyncGRDFCity" representedClassName="SyncGRDFCity" syncable="YES">
+        <attribute name="cityDepartment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cityId" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cityLatitudeDeg" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cityLongitudeDeg" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cityNameFull" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cityNameSimple" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cityNameSoundex" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cityZipCode" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SyncGRDFCityName3_CityId" representedClassName="SyncGRDFCityName3_CityId" syncable="YES">
+        <attribute name="cityId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cityNameFull" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prefix" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SyncGRDFCityName4_CityId" representedClassName="SyncGRDFCityName4_CityId" syncable="YES">
+        <attribute name="cityId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cityNameFull" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prefix" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SyncGRDFCityName5_CityId" representedClassName="SyncGRDFCityName5_CityId" syncable="YES">
+        <attribute name="cityId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cityNameFull" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prefix" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SyncGRDFCityName6_CityId" representedClassName="SyncGRDFCityName6_CityId" syncable="YES">
+        <attribute name="cityId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cityNameFull" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prefix" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SyncGRDFCityName7_CityId" representedClassName="SyncGRDFCityName7_CityId" syncable="YES">
+        <attribute name="cityId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cityNameFull" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prefix" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SyncGRDFCityZipCode_CityId" representedClassName="SyncGRDFCityZipCode_CityId" syncable="YES">
+        <attribute name="cityId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cityNameFull" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cityZipCode" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SyncGRDFDocument" representedClassName="SyncGRDFDocument" syncable="YES">
+        <attribute name="docCityNameFull" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="docDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="docFileName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="docId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="docLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="docLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="docReference" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="docTitle" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="GRDFCity" positionX="-144" positionY="-135" width="128" height="163"/>
+        <element name="GRDFCityName3_CityId" positionX="-290" positionY="-261" width="128" height="90"/>
+        <element name="GRDFCityName4_CityId" positionX="-126" positionY="-261" width="128" height="90"/>
+        <element name="GRDFCityName5_CityId" positionX="36" positionY="-261" width="128" height="88"/>
+        <element name="GRDFCityName6_CityId" positionX="36" positionY="-144" width="128" height="90"/>
+        <element name="GRDFCityName7_CityId" positionX="34" positionY="-27" width="128" height="90"/>
+        <element name="GRDFCityZipCode_CityId" positionX="-297" positionY="72" width="171" height="90"/>
+        <element name="GRDFDocument" positionX="-45" positionY="207" width="128" height="163"/>
+        <element name="LocalFiles" positionX="223" positionY="-261" width="128" height="105"/>
+        <element name="SyncGRDFCity" positionX="225" positionY="90" width="128" height="163"/>
+        <element name="SyncGRDFCityName3_CityId" positionX="385" positionY="-144" width="173" height="88"/>
+        <element name="SyncGRDFCityName4_CityId" positionX="387" positionY="-45" width="171" height="88"/>
+        <element name="SyncGRDFCityName5_CityId" positionX="387" positionY="54" width="171" height="88"/>
+        <element name="SyncGRDFCityName6_CityId" positionX="387" positionY="173" width="171" height="88"/>
+        <element name="SyncGRDFCityName7_CityId" positionX="385" positionY="279" width="173" height="88"/>
+        <element name="SyncGRDFCityZipCode_CityId" positionX="387" positionY="-261" width="171" height="88"/>
+        <element name="SyncGRDFDocument" positionX="225" positionY="-105" width="128" height="163"/>
+    </elements>
+</model>

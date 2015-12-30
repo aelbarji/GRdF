@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Activity" representedClassName="Activity" syncable="YES">
+        <attribute name="activityId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="activityName" attributeType="String" syncable="YES"/>
+        <attribute name="syncStatus" optional="YES" attributeType="Double" defaultValueString="0.0" indexed="YES" syncable="YES"/>
+        <relationship name="customers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Customer" inverseName="activity" inverseEntity="Customer" syncable="YES"/>
+    </entity>
+    <entity name="Calendar" representedClassName="Calendar" syncable="YES">
+        <attribute name="calendarId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="deviceId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncCustomerId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncLocationId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncStatus" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="customer" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="calendars" inverseEntity="Customer" syncable="YES"/>
+        <relationship name="location" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CustomerLocation" inverseName="calendars" inverseEntity="CustomerLocation" syncable="YES"/>
+    </entity>
+    <entity name="Category" representedClassName="Category" syncable="YES">
+        <attribute name="categoryCounter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryIconURI" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="categoryLargeIconURI" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryOpenData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryOrderId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="categoryStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categorySubTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncCategoryRootId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="syncModuleId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="categoriesChildren" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Category" inverseName="categoryRoot" inverseEntity="Category" syncable="YES"/>
+        <relationship name="categoryRoot" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="categoriesChildren" inverseEntity="Category" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="categories" inverseEntity="Item" syncable="YES"/>
+        <relationship name="module" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Module" inverseName="categories" inverseEntity="Module" syncable="YES"/>
+    </entity>
+    <entity name="Contact" representedClassName="Contact" syncable="YES">
+        <attribute name="contactId" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="Country" representedClassName="Country" syncable="YES">
+        <attribute name="countryCurrencyISOCode3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="countryISOCode2" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="countryTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="customers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Customer" inverseName="country" inverseEntity="Customer" syncable="YES"/>
+        <relationship name="locations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CustomerLocation" inverseName="country" inverseEntity="CustomerLocation" syncable="YES"/>
+        <relationship name="params" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ParamCountry" inverseName="country" inverseEntity="ParamCountry" syncable="YES"/>
+    </entity>
+    <entity name="Customer" representedClassName="Customer" syncable="YES">
+        <attribute name="customerCreationDate" attributeType="Date" syncable="YES"/>
+        <attribute name="customerEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="customerINTRACO" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerIsCompany" attributeType="Double" defaultValueString="0.0" indexed="YES" syncable="YES"/>
+        <attribute name="customerLastUpdate" attributeType="Date" defaultDateTimeInterval="394982902" syncable="YES"/>
+        <attribute name="customerName" attributeType="String" syncable="YES"/>
+        <attribute name="customerNature" optional="YES" attributeType="String" defaultValueString="prospect" syncable="YES"/>
+        <attribute name="customerPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerSIREN" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncActivityId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncCountryISOCode2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncStatus" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="activity" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="customers" inverseEntity="Activity" syncable="YES"/>
+        <relationship name="calendars" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Calendar" inverseName="customer" inverseEntity="Calendar" syncable="YES"/>
+        <relationship name="country" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="customers" inverseEntity="Country" syncable="YES"/>
+        <relationship name="locations" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CustomerLocation" inverseName="customer" inverseEntity="CustomerLocation" syncable="YES"/>
+        <relationship name="toDoLists" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ToDoList" inverseName="customer" inverseEntity="ToDoList" syncable="YES"/>
+    </entity>
+    <entity name="CustomerLocation" representedClassName="CustomerLocation" syncable="YES">
+        <attribute name="locationAddress1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationAddress2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationCity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationCreationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="locationId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="locationIsMainLocation" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="locationLastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="locationLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="locationLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="locationName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationType" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="headquarter" value="1"/>
+                <entry key="premises" value="0"/>
+            </userInfo>
+        </attribute>
+        <attribute name="locationZipCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncCountryISOCode2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncCustomerId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="syncStatus" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="calendars" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Calendar" inverseName="location" inverseEntity="Calendar" syncable="YES"/>
+        <relationship name="country" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="locations" inverseEntity="Country" syncable="YES"/>
+        <relationship name="customer" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="locations" inverseEntity="Customer" syncable="YES"/>
+        <relationship name="projects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Project" inverseName="location" inverseEntity="Project" syncable="YES"/>
+        <relationship name="toDoLists" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ToDoList" inverseName="location" inverseEntity="ToDoList" syncable="YES"/>
+    </entity>
+    <entity name="Group" representedClassName="Group" syncable="YES">
+        <attribute name="groupAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="groupPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncGroupCountryISOCode2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncParentGroupId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="groupMembers" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Group" inverseName="parentGroup" inverseEntity="Group" syncable="YES"/>
+        <relationship name="parentGroup" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Group" inverseName="groupMembers" inverseEntity="Group" syncable="YES"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="User" inverseName="group" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Item" representedClassName="Item" syncable="YES">
+        <attribute name="itemContentType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemFileName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemIconURI" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="itemKeywords" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemLargeIconURI" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemOpenData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemOrderId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="itemStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemSubTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncCategories" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Category" inverseName="items" inverseEntity="Category" syncable="YES"/>
+    </entity>
+    <entity name="LocalFiles" representedClassName="LocalFiles" syncable="YES">
+        <attribute name="localFileCRC" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="localFileLastUpdate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="localFileStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="localFileURL" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Module" representedClassName="Module" syncable="YES">
+        <attribute name="moduleDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="moduleId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="moduleTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Category" inverseName="module" inverseEntity="Category" syncable="YES"/>
+    </entity>
+    <entity name="Note" representedClassName="Note" syncable="YES">
+        <attribute name="noteContent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noteCreatedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noteCreationDate" optional="YES" attributeType="Date" indexed="YES" syncable="YES"/>
+        <attribute name="noteId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="noteLastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="syncProjectId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="syncStatus" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="project" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="notes" inverseEntity="Project" syncable="YES"/>
+    </entity>
+    <entity name="ParamCountry" representedClassName="ParamCountry" syncable="YES">
+        <attribute name="paramDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paramDoubleValue" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="paramStringValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paramType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncCountryISOCode2" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="params" inverseEntity="Country" syncable="YES"/>
+    </entity>
+    <entity name="Project" representedClassName="Project" syncable="YES">
+        <attribute name="customerId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="projectCreationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="projectCustomerWishDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="projectDueDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="projectId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="projectLastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="projectName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="projectObjectives" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="projectOpenData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="projectQuantity" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="projectStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncLocationId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="syncStatus" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="syncUserId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="location" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CustomerLocation" inverseName="projects" inverseEntity="CustomerLocation" syncable="YES"/>
+        <relationship name="notes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Note" inverseName="project" inverseEntity="Note" syncable="YES"/>
+        <relationship name="rows" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Row" inverseName="project" inverseEntity="Row" syncable="YES"/>
+        <relationship name="salesman" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="projects" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Row" representedClassName="Row" syncable="YES">
+        <attribute name="rowCreationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="rowId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="rowItemCategoryPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rowItemDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rowItemId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="rowItemSubTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rowItemTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rowLastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="rowMandatory" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="rowOpenData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncProjectId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="syncStatus" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="project" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="rows" inverseEntity="Project" syncable="YES"/>
+    </entity>
+    <entity name="SyncActivity" representedClassName="SyncActivity" syncable="YES">
+        <attribute name="activityId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="activityName" attributeType="String" syncable="YES"/>
+        <attribute name="syncStatus" optional="YES" attributeType="Double" defaultValueString="0.0" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="SyncCalendar" representedClassName="SyncCalendar" syncable="YES">
+        <attribute name="calendarId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="deviceId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncCustomerId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncLocationId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SyncCategory" representedClassName="SyncCategory" syncable="YES">
+        <attribute name="categoryCounter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryIconURI" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="categoryLargeIconURI" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryOpenData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryOrderId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="categoryStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categorySubTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncCategoryRootId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="syncModuleId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="SyncContact" representedClassName="SyncContact" syncable="YES">
+        <attribute name="contactId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SyncCountry" representedClassName="SyncCountry" syncable="YES">
+        <attribute name="countryCurrencyISOCode3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="countryISOCode2" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="countryTitle" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SyncCustomer" representedClassName="SyncCustomer" syncable="YES">
+        <attribute name="customerCreationDate" attributeType="Date" syncable="YES"/>
+        <attribute name="customerEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="customerINTRACO" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerIsCompany" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="customerLastUpdate" attributeType="Date" defaultDateTimeInterval="394982902" syncable="YES"/>
+        <attribute name="customerName" attributeType="String" syncable="YES"/>
+        <attribute name="customerNature" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerSIREN" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncActivityId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncCountryISOCode2" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SyncCustomerLocation" representedClassName="SyncCustomerLocation" syncable="YES">
+        <attribute name="locationAddress1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationAddress2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationCity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationCreationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="locationId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="locationIsMainLocation" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="locationLastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="locationLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="locationLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="locationName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationType" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="headquarter" value="1"/>
+                <entry key="premises" value="0"/>
+            </userInfo>
+        </attribute>
+        <attribute name="locationZipCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncCountryISOCode2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncCustomerId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="SyncGroup" representedClassName="SyncGroup" syncable="YES">
+        <attribute name="groupAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="groupPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncGroupCountryISOCode2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncParentGroupId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SyncItem" representedClassName="SyncItem" syncable="YES">
+        <attribute name="itemContentType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemFileName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemIconURI" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="itemKeywords" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemLargeIconURI" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemOpenData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemOrderId" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="itemStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemSubTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncCategories" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SyncModule" representedClassName="SyncModule" syncable="YES">
+        <attribute name="moduleDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="moduleId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="moduleTitle" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SyncNote" representedClassName="SyncNote" syncable="YES">
+        <attribute name="noteContent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noteCreatedBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noteCreationDate" optional="YES" attributeType="Date" indexed="YES" syncable="YES"/>
+        <attribute name="noteId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="noteLastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="syncProjectId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="SyncParamCountry" representedClassName="SyncParamCountry" syncable="YES">
+        <attribute name="paramDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paramDoubleValue" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="paramStringValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paramType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncCountryISOCode2" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SyncProject" representedClassName="SyncProject" syncable="YES">
+        <attribute name="customerId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="projectCreationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="projectCustomerWishDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="projectDueDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="projectId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="projectLastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="projectName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="projectObjectives" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="projectOpenData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="projectQuantity" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="projectStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncLocationId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="syncUserId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="SyncRow" representedClassName="SyncRow" syncable="YES">
+        <attribute name="rowCreationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="rowId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="rowItemCategoryPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rowItemDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rowItemId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="rowItemSubTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rowItemTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rowLastUpdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="rowMandatory" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="rowOpenData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncProjectId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="SyncToDoList" representedClassName="SyncToDoList" syncable="YES">
+        <attribute name="deviceId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncCustomerId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncLocationId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="toDoListId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SyncUser" representedClassName="SyncUser" syncable="YES">
+        <attribute name="syncGroupId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncManagerId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncUserRoleId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userFirstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="userLastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userPseudo" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SyncUserRole" representedClassName="SyncUserRole" syncable="YES">
+        <attribute name="userRoleId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="userRoleTitle" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ToDoList" representedClassName="ToDoList" syncable="YES">
+        <attribute name="deviceId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncCustomerId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncLocationId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncStatus" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="toDoListId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="customer" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="toDoLists" inverseEntity="Customer" syncable="YES"/>
+        <relationship name="location" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="CustomerLocation" inverseName="toDoLists" inverseEntity="CustomerLocation" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="syncGroupId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncManagerId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncUserRoleId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userFirstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="userLastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userPseudo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="employees" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="manager" inverseEntity="User" syncable="YES"/>
+        <relationship name="group" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Group" inverseName="users" inverseEntity="Group" syncable="YES"/>
+        <relationship name="manager" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="employees" inverseEntity="User" syncable="YES"/>
+        <relationship name="projects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Project" inverseName="salesman" inverseEntity="Project" syncable="YES"/>
+        <relationship name="roles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserRole" inverseName="users" inverseEntity="UserRole" syncable="YES"/>
+    </entity>
+    <entity name="UserRole" representedClassName="UserRole" syncable="YES">
+        <attribute name="userRoleId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="userRoleTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="roles" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Activity" positionX="169" positionY="36" width="128" height="105"/>
+        <element name="Calendar" positionX="178" positionY="230" width="128" height="148"/>
+        <element name="Category" positionX="-369" positionY="-468" width="128" height="285"/>
+        <element name="Contact" positionX="576" positionY="396" width="128" height="58"/>
+        <element name="Country" positionX="-227" positionY="-90" width="155" height="133"/>
+        <element name="Customer" positionX="-20" positionY="-198" width="128" height="313"/>
+        <element name="CustomerLocation" positionX="-243" positionY="99" width="128" height="345"/>
+        <element name="Group" positionX="-29" positionY="-459" width="128" height="223"/>
+        <element name="Item" positionX="-533" positionY="-463" width="128" height="255"/>
+        <element name="LocalFiles" positionX="322" positionY="-108" width="128" height="103"/>
+        <element name="Module" positionX="-533" positionY="-193" width="128" height="103"/>
+        <element name="Note" positionX="-605" positionY="-36" width="128" height="163"/>
+        <element name="ParamCountry" positionX="-423" positionY="-81" width="162" height="133"/>
+        <element name="Project" positionX="-441" positionY="62" width="128" height="313"/>
+        <element name="Row" positionX="-621" positionY="171" width="128" height="238"/>
+        <element name="SyncActivity" positionX="630" positionY="-279" width="128" height="90"/>
+        <element name="SyncCalendar" positionX="486" positionY="81" width="128" height="103"/>
+        <element name="SyncCategory" positionX="142" positionY="-468" width="128" height="223"/>
+        <element name="SyncContact" positionX="574" positionY="324" width="128" height="58"/>
+        <element name="SyncCountry" positionX="306" positionY="-216" width="153" height="88"/>
+        <element name="SyncCustomer" positionX="630" positionY="-171" width="128" height="225"/>
+        <element name="SyncCustomerLocation" positionX="486" positionY="-180" width="128" height="255"/>
+        <element name="SyncGroup" positionX="628" positionY="-468" width="155" height="178"/>
+        <element name="SyncItem" positionX="144" positionY="-234" width="128" height="238"/>
+        <element name="SyncModule" positionX="322" positionY="-468" width="128" height="88"/>
+        <element name="SyncNote" positionX="799" positionY="-468" width="128" height="133"/>
+        <element name="SyncParamCountry" positionX="322" positionY="-351" width="128" height="118"/>
+        <element name="SyncProject" positionX="799" positionY="-324" width="128" height="238"/>
+        <element name="SyncRow" positionX="799" positionY="-79" width="128" height="210"/>
+        <element name="SyncToDoList" positionX="639" positionY="81" width="128" height="103"/>
+        <element name="SyncUser" positionX="486" positionY="-378" width="128" height="178"/>
+        <element name="SyncUserRole" positionX="486" positionY="-468" width="128" height="73"/>
+        <element name="ToDoList" positionX="-18" positionY="180" width="128" height="148"/>
+        <element name="User" positionX="-200" positionY="-531" width="128" height="253"/>
+        <element name="UserRole" positionX="-198" positionY="-196" width="128" height="88"/>
+    </elements>
+</model>

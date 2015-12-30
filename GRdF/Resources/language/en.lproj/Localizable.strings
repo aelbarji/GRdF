@@ -1,0 +1,66 @@
+/* 
+  LocalizableStrings.strings
+  GRdF
+
+  Created by Jean-Philippe BEAUFILS on 19/11/13.
+  Copyright (c) 2013 Onatys. All rights reserved.
+*/
+
+// language : en
+
+// ======== main navigation ===========
+"Result_List"                   = "List";
+"Result_Map"                    = "Map";
+"Document_Detail"               = "Notice's detail";
+"Settings"                      = "Settings";
+"Search"                        = "Search";
+
+// ========  main action  ============
+"Ok"                            = "Ok";
+"Done"                          = "Ok";
+"Modify"                        = "Modify";
+"Apply"                         = "Apply";
+"Back"                          = "Back";
+"Close"                         = "Close";
+"Continue"                      = "Continue";
+"Cancel"                        = "Cancel";
+"Save"                          = "Save";
+"Delete"                        = "Delete";
+"Mode_Map"                      = "Display map";
+"Mode_List"                     = "Display list";
+
+// ========== main msg  =============
+"Please_Wait"                   = "Please wait";
+"NoConnectivity"                = "Waiting ...";
+"Authentication_Pb"             = "Waiting ...";
+"AppEnv_alpha"                  = "alpha environment";
+"AppEnv_beta"                   = "beta environment";
+
+// ================  search    =================
+//    --- title  ---
+"Search_ZipCode"                = "Zip code:";
+"Search_CityName"               = "City name:";
+"Search_RadiusMask"             = "Search radius [radius] km";
+"Search_NoResult"               = "No document found for current criteria";
+"Search_MapTitleMask"           = "Ref. Coordinates : [lat]°N, [lon]°E - [nb] document(s)";
+
+//    --- placeholder ---
+"Search_pZipCode"               = "5 characters";
+"Search_pCityName"              = "name";
+"Search_NbZipCodesMask"         = "([nb] zipcode(s) found)";
+"Search_NbCityNamesMask"        = "([nb] city-name(s) found)";
+
+// ================  settings  =================
+"Settings_AppDetails"           = "Application details";
+"Settings_VersionTitle"         = "Release:";
+"Settings_VersionTitle_alpha"   = "Release (alpha env):";
+"Settings_VersionTitle_beta"    = "Release (beta env):";
+"Settings_SyncTitle"            = "Synchronization:";
+"Settings_SyncFullTitle"        = "Full:";
+
+"Settings_BtnUpdate"            = "Update";
+"Settings_BtnForceSync"         = "Force full";
+
+"Disclaimer"                    = "Developpement performed by HN Services\nFor support, please contact us at  support.grdf@groupehn.com";
+"Licence"                       = "City repository provided by http://sql.sh is shared according to the terms of Creative Commons Attribution - ShareAlike 4.0 International licence.";
+

@@ -1,0 +1,41 @@
+/* 
+  OMBSSynchroLocalizable.strings
+  SavoirEtReussir
+
+  Created by Jean-Philippe BEAUFILS on 16/09/13.
+  Copyright (c) 2013 Onatys. All rights reserved.
+*/
+
+// language = en
+
+// ========    Synchronization process   =========
+// ----------------- warning ---------------------
+"Sync_Description"              = "Information synchronization : cancelation request will be treated at logical point to garanty data consistency";
+// --------- sub process title ---------
+"Sync_DownloadDbTimestamps"     = "Checking server timestamps";
+"Sync_DownloadDocumentTable"    = "Synchronizing document references";
+"Sync_DownloadCityTable"        = "Synchronizing city references";
+"Sync_DownloadFile"             = "File synchronization";
+
+
+// --------- sub process information ---------
+"Sync_Inf_CancelByUser"         = "canceled by user";
+"Sync_Inf_DocumentsDownload"    = "document reference download";
+"Sync_Inf_CitiesDownload"       = "city reference download";
+"Sync_DownloadRemainFiles"      = "files to process";
+"Sync_DownloadRemainFile"       = "file to process";
+"Sync_DownloadMissingFiles"     = "files not found";
+"Sync_DownloadMissingFile"      = "file not found";
+
+// ========== global process messages =========
+// ------------- title ------------------------
+"Sync_ProcessCompleted"         = "Synchronization completed";
+"Sync_ProcessAborted"           = "Synchronization not fully completed";
+"Sync_TimestampsError"          = "Timestamps not available - cannot synchronize data";
+"Sync_DownloadFilesError"       = "Files not all available on server";
+
+// ------------ sync files labels ------------
+
+"Sync_Files"                    = "files";
+"Sync_File"                     = "file";
+

@@ -1,0 +1,72 @@
+/* 
+  LocalizableStrings.strings
+  GRdF
+
+  Created by Jean-Philippe BEAUFILS on 19/11/13.
+  Copyright (c) 2013 Onatys. All rights reserved.
+*/
+
+// language : fr
+
+// ======== main navigation ===========
+"Result_List"                   = "Liste";
+"Result_Map"                    = "Carte";
+"Document_Detail"               = "Détail de la fiche";
+"Settings"                      = "Paramètres";
+"Search"                        = "Rechercher";
+
+// ========  main action  ============
+"Ok"                            = "Ok";
+"Done"                          = "Ok";
+"Modify"                        = "Modifier";
+"Apply"                         = "Appliquer";
+"Back"                          = "Retour";
+"Close"                         = "Fermer";
+"Continue"                      = "Continuer";
+"Cancel"                        = "Annuler";
+"Save"                          = "Enregistrer";
+"Delete"                        = "Supprimer";
+"Mode_Map"                      = "Afficher carte";
+"Mode_List"                     = "Afficher liste";
+
+// ========== main msg  =============
+"Please_Wait"                   = "Veuillez patienter";
+"NoConnectivity"                = "En attente...";
+"Authentication_Pb"             = "En attente...";
+"AppEnv_alpha"                  = "environnement alpha";
+"AppEnv_beta"                   = "environnement beta";
+
+// ================  search    =================
+//    --- title  ---
+"Search_ZipCode"                = "Code postal:";
+"Search_CityName"               = "Nom de la ville:";
+"Search_RadiusMask"             = "Rayon de recherche [radius] km";
+"Search_NoResult"               = "Aucun document trouvé.\nVeuillez sélectionner code postal et ville puis affinez la recherche en augmentant ou réduisant le rayon de recherche.";
+"Search_MapTitleMask"           = "Coordonnées de référence : [lat]°N, [lon]°E - [nb] fiche(s)";
+
+//    --- placeholder ---
+"Search_pZipCode"               = "sur 5 caractères";
+"Search_pCityName"              = "nom";
+"Search_NbZipCodesMask"         = "([nb] code(s) trouvé(s))";
+"Search_NbCityNamesMask"        = "([nb] nom(s) trouvé(s))";
+
+// ================  settings  =================
+"Settings_AppDetails"           = "Détails de l'application";
+"Settings_VersionTitle"         = "Version:";
+"Settings_VersionTitle_alpha"   = "Version (env. alpha):";
+"Settings_VersionTitle_beta"    = "Version (env. beta):";
+"Settings_SyncTitle"            = "Synchronisation:";
+"Settings_SyncFullTitle"        = "Complète:";
+
+"Settings_BtnUpdate"            = "Mise à jour";
+"Settings_BtnForceSync"         = "Forcer";
+
+"Disclaimer"                    = "Développement réalisé par HN Services\nPour le support, merci nous contacter sur : support.grdf@groupehn.com";
+"Licence"                       = "Le référentiel des communes de http://sql.sh est mis à disposition selon les termes de la licence Creative Commons Attribution – Partage dans les Mêmes Conditions 4.0 International.";
+
+
+
+
+
+
+
