@@ -5,5 +5,7 @@
 
 target 'GRdF' do
 pod 'MBProgressHUD'
+pod 'Fabric'
+pod 'Crashlytics'
 end
 

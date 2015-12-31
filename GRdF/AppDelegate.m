@@ -9,6 +9,8 @@
 #import "MainViewController.h"
 #import "SynchroViewController.h"
 #import "SettingsViewController.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 #import "AppDelegate.h"
 
@@ -152,6 +154,10 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
+    
+    //FABRIC
+    [[Fabric sharedSDK] setDebug: YES];
+    [Fabric with:@[[Crashlytics class]]];
 
     // Copy data base
     [ self initDataBase];

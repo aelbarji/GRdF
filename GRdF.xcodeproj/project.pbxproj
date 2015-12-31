@@ -870,6 +870,7 @@
 				95481DC11A1B9EFA005E1E1D /* Resources */,
 				3DA43C7F76787E2976A49E68 /* Embed Pods Frameworks */,
 				C8814315D1FE7CEA1F9D85F0 /* Copy Pods Resources */,
+				E1B11A8F1C356472006BDD75 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1021,6 +1022,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		E1B11A8F1C356472006BDD75 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 310ce220b85ba83f55b718f473328b67563b9d92 1506a12ff5954ddc3dde0222c1daf96d239d61dd623c2d24f634fddd8ce3d3cd";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1180,8 +1194,8 @@
 				CLANG_WARN_ENUM_CONVERSION = NO;
 				CLANG_WARN_INT_CONVERSION = NO;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jean Philippe BEAUFILS (HPA966MBSM)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jean Philippe BEAUFILS (HPA966MBSM)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: VINCENT NOVAS (EU288MR7ZP)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: VINCENT NOVAS (EU288MR7ZP)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1202,6 +1216,7 @@
 				PROVISIONING_PROFILE = "CECB6B04-C07B-49FA-9750-A040C786D59A";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
@@ -1217,9 +1232,10 @@
 				CLANG_WARN_ENUM_CONVERSION = NO;
 				CLANG_WARN_INT_CONVERSION = NO;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jean Philippe BEAUFILS (HPA966MBSM)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: VINCENT NOVAS (EU288MR7ZP)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: VINCENT NOVAS (EU288MR7ZP)";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_INPUT_FILETYPE = automatic;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
